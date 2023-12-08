@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _01_IntroToWPF
+namespace _04_Slider
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -21,20 +21,20 @@ namespace _01_IntroToWPF
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            MessageBox.Show("You click on Button 1");
+            this.Opacity = slider.Value / 100.0;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-           
-            MessageBox.Show((sender as Button).Content.ToString());
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(textBox.Text);
+            this.Close();
         }
     }
 }
