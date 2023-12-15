@@ -17,6 +17,7 @@
             <ListBoxItem>Green</ListBoxItem>
             <ListBoxItem>Blue</ListBoxItem>
         </ListBox>
+       
 
     </DockPanel>
 </Window>
